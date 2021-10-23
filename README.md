@@ -42,6 +42,7 @@ Codam [42 Network] project: the aim of this project is to virtualize a network b
     - Username: user
     - Password: password
     - Port: 21
+- when done run `sh clean_minikube`
 <br/><br/>
 
 ### General information
