@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<style>
+			body {
+			background-image: linear-gradient(
+			to right, 
+			#9ae79a, 
+			#84ecd6,
+			#91c0f0, 
+			#ee97d4);
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			color: black;
+			text-align: center;
+			}
+		</style>
+		<title>Welcome!</title>
+	</head>
+	<body>
+		<h1>Welcome to nginx<br><br></h1>
+		<p><h5 style="background-color: #84ecd6;">SSH</h5>in terminal enter: ssh user@192.168.99.120 password<br>
+		you may need to delete the known host first at .ssh/knownhosts</p><br>
+			
+		<p><h5 style="background-color: #84ecd6;">PHPMYADMIN</h5></p>
+		<p><a href="http://192.168.99.120:5000/" style="color:#383a38">http://192.168.99.120:5000/</a> - visit phpmyadmin via port 5000</p>
+		<p><a href="https://192.168.99.120/phpmyadmin/" style="color:#383a38">https://192.168.99.120/phpmyadmin/</a> - visit phpmyadmin via nginx reverse proxy</p>
+		<p>Login - mysql:password</p><br>
+
+		<p><h5 style="background-color: #84ecd6;">WORDPRESS</h5></p>
+		<p><a href="http://192.168.99.120:5050/" style="color:#383a38">http://192.168.99.120:5050/</a> - visit wordpress via port 5050</p>
+		<p><a href="https://192.168.99.120/wordpress/" style="color:#383a38">https://192.168.99.120/wordpress/</a> - visit wordpress via nginx redirect 307</p>	
+		<p>Logins - user:password, nilo:password, brit:password, tessa:password</p><br>
+
+		<p><h5 style="background-color: #84ecd6;">FTPS</h5>Open Filezilla and connect with these credentials:<br>Host: 192.168.99.120<br>Username: user<br>Password: password<br>Port: 21</p><br>
+
+		<p><h5 style="background-color: #84ecd6;">GRAFANA</h5></p>
+		<p><a href="http://192.168.99.120:3000/" style="color:#383a38"> http://192.168.99.120:3000/</a> - visit grafana dashboard</p>
+		<p>Login - admin:admin</p><br><br>
+
+		<p  style="background-color: #84ecd6; text-align: left; color:#383a38;">COMMANDS</p>
+		<p style="text-align: left; color:#383a38;">
+			kubectl get all -n default<br>
+			kubectl get node<br>
+			kubectl get pod<br>
+			kubectl get service<br>
+			kubectl get deployment<br>
+			kubectl get persistentvolumeclaim<br>
+			kubectl exec -stdin -tty pod_name - /bin/ash : navigate to shell of pod<br>
+			kubectl scale deployment nginx --replicas=0 -n default : change replica count<br>
+			kubectl delete svc,deployments,pv,pvc,pods,configmaps,role,rolebinding,secret,serviceaccount -l app=nginx --wait=false : delete inside minikube<br>
+			eval $(minikube docker-env)<br><br>
+
+			check running processes with ps and then kill with the following commands:<br>
+			kubectl exec deploy/ftps -- pkill vsftpd<br>
+			kubectl exec deploy/influxdb -- pkill influxd<br>
+			kubectl exec deploy/grafana -- pkill grafana<br>
+			kubectl exec deploy/grafana -- pkill grafana-server<br>
+			kubectl exec deploy/nginx -- pkill nginx<br>
+			kubectl exec deploy/nginx -- pkill sshd<br>
+			kubectl exec deploy/mysql -- pkill mysqld<br>
+			kubectl exec deploy/phpmyadmin -- pkill nginx<br>
+			kubectl exec deploy/phpmyadmin -- pkill php-fpm7<br>
+			kubectl exec deploy/telegraf -- pkill telegraf<br>
+			kubectl exec deploy/wordpress -- pkill nginx<br>
+			kubectl exec deploy/wordpress -- pkill php-fpm7<br>
+		</p>
+	</body>
+</html>
