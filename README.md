@@ -3,7 +3,7 @@
 Codam [42 Network] project: the aim of this project is to virtualize a network by setting up a multi-service cluster using Kubernetes.
 <br/><br/>
 
-### Specifications
+## Specifications
 - kubernetes web dashboard
 - metallb load balancer with a single IP that is the only entrance to the cluster
 - wordpress website listening on port 5050 that works with a mysql database and has it's own nginx server
@@ -17,7 +17,7 @@ Codam [42 Network] project: the aim of this project is to virtualize a network b
 ![map](https://github.com/subsp4ce/pics/blob/master/ft_services_map.png "map")
 <br/><br/>
 
-### Instructions
+## Instructions
 - run `sh setup.sh`
 - the kubernetes dashboard will launch automatically in your browser
 - to access services you can navigate to http://192.168.99.120 for instructions or read below
@@ -45,18 +45,18 @@ Codam [42 Network] project: the aim of this project is to virtualize a network b
 - when done run `sh clean_minikube`
 <br/><br/>
 
-### General information
+## General information
 - `Docker` is a program that performs operating-system-level virtualization, also known as “containerization”
 - `kubernetes` is a portable, extensible, open-source platform for managing containerized workloads and services (ie: Docker containers)
 - `kubectl`is kubernetes' command-line tool which allows you to run commands against Kubernetes clusters
 - `minikube` is a lightweight Kubernetes implementation that creates a VM on your local machine and deploys a simple cluster containing only one node
 <br/><br/>
 
-### Skills
+## Skills
 - Network & system administration
 <br/><br/>
 
-### Objectives
+## Objectives
 - System administration
 <br/><br/>
 
