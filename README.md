@@ -20,7 +20,7 @@ Codam [42 Network] project: the aim of this project is to virtualize a network b
 ## Instructions
 - run `sh setup.sh`
 - the kubernetes dashboard will launch automatically in your browser
-- to access services you can navigate to http://192.168.99.120 for instructions or read below
+- to access services you can navigate to http://192.168.99.120 for instructions or read below:
 - **WORDPRESS**
     -  visit wordpress via port 5050 http://192.168.99.120:5050/
     -  visit wordpress via nginx redirect 307 https://192.168.99.120/wordpress/
@@ -60,4 +60,4 @@ Codam [42 Network] project: the aim of this project is to virtualize a network b
 - System administration
 <br/><br/>
 
-![Trees](https://github.com/subsp4ce/pics/blob/master/pexels-skitterphoto-240040.jpg "Trees")
+![dashboard](https://github.com/subsp4ce/pics/blob/master/ft_services_dashboard.png "dashboard")
